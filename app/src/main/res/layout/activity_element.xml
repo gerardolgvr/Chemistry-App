@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElementActivity"
+    android:background="#f2f2f2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#fff"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Gases Nobles"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="NE"
+                    android:textAlignment="center"
+                    android:textSize="90sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Neón"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Periodo"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="2"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Grupo"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="18"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Bloque"
+                            android:textAlignment="center"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_light"
+                            android:text="p"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Usos"
+            android:textColor="@color/textDark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:lineHeight="18sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac vehicula ligula. Etiam mauris eros, egestas non porta vitae, lacinia nec quam.  "
+            android:textColor="#707070"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Disponibilidad"
+            android:textColor="@color/textDark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:lineHeight="18sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac vehicula ligula. Etiam mauris eros, egestas non porta vitae, lacinia nec quam.  "
+            android:textColor="#707070"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
