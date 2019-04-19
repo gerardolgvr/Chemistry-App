@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.6"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/list_symbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NE"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="19sp"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/list_atomic_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:fontFamily="@font/montserrat_light"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="#7169C5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.1"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/list_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Neón"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="25sp"
+                android:textColor="#7166EE"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
