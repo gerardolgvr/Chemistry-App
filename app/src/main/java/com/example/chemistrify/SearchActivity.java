@@ -123,7 +123,13 @@ public class SearchActivity extends AppCompatActivity {
         intent.putExtra("groupBlock", element.getGroupBlock());
         intent.putExtra("atomicNumber", element.getAtomicNumber());
         intent.putExtra("symbol", element.getSymbol());
+        intent.putExtra("atomicMass", element.getAtomicMass());
         intent.putExtra("name", element.getName());
+        intent.putExtra("electronicConfiguration", element.getElectronicConfiguration());
+        intent.putExtra("standardState", element.getStandardState());
+        intent.putExtra("ionizationEnergy", element.getIonizationEnergy());
+        intent.putExtra("density", element.getDensity());
+        intent.putExtra("yearDiscovered", element.getYearDiscovered());
         startActivity(intent);
     }
 
