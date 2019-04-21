@@ -33,6 +33,7 @@ public class SearchActivity extends AppCompatActivity {
     private ArrayList<Element> elements = new ArrayList<>();
 
     private ListView listView;
+    ArrayAdapter<Element> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class SearchActivity extends AppCompatActivity {
         initList();
 
         //create our new array adapter
-        ArrayAdapter<Element> adapter = new elementArrayAdapter(getApplicationContext(), 0, elements);
+        adapter = new elementArrayAdapter(getApplicationContext(), 0, elements);
 
         //Find list view and bind it with the custom adapter
         listView = (ListView) findViewById(R.id.listView);
@@ -57,7 +58,6 @@ public class SearchActivity extends AppCompatActivity {
                 showElement(elements.get(position));
             }
         });
-
     }
 
     //method that makes a request
@@ -66,6 +66,7 @@ public class SearchActivity extends AppCompatActivity {
         mQueue = Volley.newRequestQueue(getApplicationContext());
         String url = "https://neelpatel05.pythonanywhere.com/";
 
+        //handling request
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -77,12 +78,12 @@ public class SearchActivity extends AppCompatActivity {
                         //getting data
                         String atomicMass = obj.getString("atomicMass");
                         int atomicNumber = obj.getInt("atomicNumber");
-                        int atomicRadius = obj.getInt("atomicRadius");
-                        int boilingPoint = obj.getInt("boilingPoint");
+                        String atomicRadius = obj.get("atomicRadius").toString();
+                        String boilingPoint = obj.get("boilingPoint").toString();
                         String bondingType = obj.getString("bondingType");
                         String cpkHexColor = obj.getString("cpkHexColor");
                         String density = obj.getString("density");
-                        int electronAffinity = obj.getInt("electronAffinity");
+                        String electronAffinity = obj.get("electronAffinity").toString();
                         String electronegativity = obj.getString("electronegativity");
                         String electronicConfiguration = obj.getString("electronicConfiguration");
                         String groupBlock = obj.getString("groupBlock");
@@ -101,6 +102,7 @@ public class SearchActivity extends AppCompatActivity {
                         elements.add(element);
                         //updating listView (forcing rendering)
                         listView.invalidateViews();
+                        adapter.notifyDataSetChanged();
                     }
 
                 } catch (JSONException e) {

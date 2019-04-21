@@ -4,12 +4,12 @@ public class Element {
 
     private String atomicMass;
     private int atomicNumber;
-    private int atomicRadius;
-    private int boilingPoint;
+    private String atomicRadius;
+    private String boilingPoint;
     private String bondingType;
     private String cpkHexColor;
     private String density;
-    private int electronAffinity;
+    private String electronAffinity;
     private String electronegativity;
     private String electronicConfiguration;
     private String groupBlock;
@@ -26,7 +26,7 @@ public class Element {
     //constructors
     public Element(){ }
 
-    public Element(String atomicMass, int atomicNumber, int atomicRadius, int boilingPoint, String bondingType, String cpkHexColor, String density, int electronAffinity, String electronegativity, String electronicConfiguration, String groupBlock, String ionRadius, String ionizationEnergy, String meltingPoint, String name, String oxidationStates, String standardState, String symbol, String vanDelWaalsRadius, String yearDiscovered) {
+    public Element(String atomicMass, int atomicNumber, String atomicRadius, String boilingPoint, String bondingType, String cpkHexColor, String density, String electronAffinity, String electronegativity, String electronicConfiguration, String groupBlock, String ionRadius, String ionizationEnergy, String meltingPoint, String name, String oxidationStates, String standardState, String symbol, String vanDelWaalsRadius, String yearDiscovered) {
         this.atomicMass = atomicMass;
         this.atomicNumber = atomicNumber;
         this.atomicRadius = atomicRadius;
@@ -75,19 +75,19 @@ public class Element {
         this.atomicNumber = atomicNumber;
     }
 
-    public int getAtomicRadius() {
+    public String getAtomicRadius() {
         return atomicRadius;
     }
 
-    public void setAtomicRadius(int atomicRadius) {
+    public void setAtomicRadius(String atomicRadius) {
         this.atomicRadius = atomicRadius;
     }
 
-    public int getBoilingPoint() {
+    public String getBoilingPoint() {
         return boilingPoint;
     }
 
-    public void setBoilingPoint(int boilingPoint) {
+    public void setBoilingPoint(String boilingPoint) {
         this.boilingPoint = boilingPoint;
     }
 
@@ -115,11 +115,11 @@ public class Element {
         this.density = density;
     }
 
-    public int getElectronAffinity() {
+    public String getElectronAffinity() {
         return electronAffinity;
     }
 
-    public void setElectronAffinity(int electronAffinity) {
+    public void setElectronAffinity(String electronAffinity) {
         this.electronAffinity = electronAffinity;
     }
 
