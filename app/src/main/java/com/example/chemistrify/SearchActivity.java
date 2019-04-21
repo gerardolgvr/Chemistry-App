@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.android.volley.Request;
@@ -33,7 +34,9 @@ public class SearchActivity extends AppCompatActivity {
     private ArrayList<Element> elements = new ArrayList<>();
 
     private ListView listView;
-    ArrayAdapter<Element> adapter;
+    private SearchView searchView;
+    private ArrayAdapter<Element> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,10 @@ public class SearchActivity extends AppCompatActivity {
                 showElement(elements.get(position));
             }
         });
+
+
+
+
     }
 
     //method that makes a request
@@ -139,6 +146,38 @@ public class SearchActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
+
+        searchView = (SearchView) menu.findItem(R.id.btn_search_menu).getActionView();
+        searchView.setQueryHint("Helium ....");
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                //check new text is not empty
+                if(newText != null && !newText.isEmpty()){
+                    ArrayList<Element> elementsFound = new ArrayList<>();
+                    for(Element element:elements){
+                        if(element.getName().contains(newText)){
+                            elementsFound.add(element);
+                        }
+                    }
+                    //showing elements that contains the words written at searchView
+                    adapter = new elementArrayAdapter(getApplicationContext(), 0, elementsFound);
+                    listView.setAdapter(adapter);
+
+                } else {
+                    //text is null (showing original data)
+                    adapter = new elementArrayAdapter(getApplicationContext(), 0, elements);
+                    listView.setAdapter(adapter);
+                }
+                return true;
+            }
+        });
+
         return true;
     }
 
