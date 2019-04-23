@@ -161,7 +161,7 @@ public class SearchActivity extends AppCompatActivity {
                 if(newText != null && !newText.isEmpty()){
                     ArrayList<Element> elementsFound = new ArrayList<>();
                     for(Element element:elements){
-                        if(element.getName().contains(newText)){
+                        if(element.getName().toLowerCase().contains(newText.toLowerCase())){
                             elementsFound.add(element);
                         }
                     }
