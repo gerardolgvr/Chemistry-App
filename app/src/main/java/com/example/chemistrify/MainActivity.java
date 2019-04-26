@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private void initList(final Context context){
         //api URL, GET Request
         mQueue = Volley.newRequestQueue(getApplicationContext());
-        String url = "https://api.myjson.com/bins/16qrno/";
+        String url = "https://neelpatel05.pythonanywhere.com/";
 
         //handling request
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
